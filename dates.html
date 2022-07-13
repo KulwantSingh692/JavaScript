@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date object</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+    <p id="dateobj1" onload="getdate()"></p>
+    <script>
+        
+        function getdate() {
+            let d = new Date();
+            document.getElementById('dateobj1').innerHTML = d.toLocaleDateString() + "<br>" +  d.toLocaleTimeString('en-US', {Minute:"numeric", Minute60: true});
+            setInterval(getdate, 1000);
+        }getdate();
+        
+    </script>
+    
+    <h1>Array</h1>
+    <p id="arr"></p>
+    <script>
+        const fruits = ["banana","orange","apple","papaya"];
+        
+    </script>
+</body>
+</html>
